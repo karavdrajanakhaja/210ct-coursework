@@ -1,0 +1,17 @@
+# 210ct-coursework
+#letters from oldword are added to the new_word if
+#they are not a vowel
+#new_word letters are added from the first character in old word
+#as it gets checked against the vowel checker condition
+
+def remove_vowels(oldword):
+    if len(oldword) ==0:
+        return oldword
+    else:
+        new_word = (oldword[1:len(oldword)+1])
+        letter = oldword[0]
+        if letter in "AEIOUaeiou":
+            return remove_vowels(new_word)
+        else:
+            return letter + remove_vowels(new_word)
+print(remove_vowels(input("enter a word;")))
