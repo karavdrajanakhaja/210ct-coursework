@@ -1,0 +1,43 @@
+# 210ct-coursework
+QUESTION 3
+import math
+
+def PERFECT_SQUARE(n):
+if(n mod math.sqrt(n) = 0):
+else:
+ x <- int(math.sqrt(n))
+
+
+
+QUESTION 6
+def SPLIT (x):
+temp <- []
+for i in range(1,len(x)+1):
+        	temp.append(x[-i])
+x= input("Enter a sentence:").split(" ")
+QUESTION 13
+class Graph:
+    def  INITIALISE(self):
+        self.nodes <- {}
+
+    def ADDNODE(self,value):
+        self.nodes[value] = []
+
+    def ADDVERTEX(self, start, end):
+        self.nodes[start].append(end)
+        self.nodes[end].append(start)
+node = Graph()
+node.addNode(1)
+node.addNode(2)
+node.addNode(3)
+node.addNode(4)
+node.addNode(5)
+node.addNode(6)
+node.addVertex(1,2)
+node.addVertex(2,3)
+node.addVertex(2,5)
+node.addVertex(1,4)
+node.addVertex(6,4)
+
+
+
