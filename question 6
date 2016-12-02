@@ -1,0 +1,16 @@
+# 210ct-coursework
+#sentence length is checked
+#the sentence is then split from the last word
+#split word is added to temp
+#after all splits are done,the words are then joined back
+
+def split (x):
+    temp = []
+
+    for i in range(1,len(x)+1):
+        temp.append(x[-i])
+
+    print(" ".join(temp))
+
+x= input("Enter a sentence:").split(" ")
+split(x)
