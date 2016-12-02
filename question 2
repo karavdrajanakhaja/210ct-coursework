@@ -1,0 +1,29 @@
+# 210ct-coursework
+import math
+
+#calculation of factorial of the given number in x
+
+def factorial(i):
+    i = int(i)
+    ans = math.factorial(i)
+    return ans
+
+#counting the number of trailing zeros from the last digit
+#until the number is no longer zero
+
+def trailing_zeros(n):
+
+    n=str(n)
+    counter = 0
+
+    for i in range (1,len(n)+1):
+        if(n[-i]=='0'):
+           counter = counter+1
+        else:
+           break
+    print(counter)
+
+x=factorial(input("enter a number to find the number of trailing zeros in its factorial:"))
+
+trailing_zeros(x)
+    
