@@ -1,0 +1,20 @@
+# 210ct-coursework
+#dividing value always starts with 2
+#if the answer to division is 0 then number is not prime
+#prime numbers are only divisible by its number
+#divider counter is increased by 1 everytime the answer is false
+
+def prime_number(divider,number):
+    while divider != number:
+        if number % divider == 0:
+            print ('not prime')
+            return False
+        else:
+            return prime_number(divider + 1,number)
+    else:
+        print('is prime')
+        return True
+
+divider = 2
+number = int(input("enter a number to check if it is prime:"))
+prime_number(divider,number)
