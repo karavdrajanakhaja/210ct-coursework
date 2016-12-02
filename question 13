@@ -1,0 +1,32 @@
+# 210ct-coursework
+#class graph is created with nodes and vertex defined under it
+class Graph:
+    def __init__(self):
+        self.nodes = {}
+
+    def addNode(self,value):
+        self.nodes[value] = []
+
+    def addVertex(self, start, end):
+        self.nodes[start].append(end)
+        self.nodes[end].append(start)
+
+
+#node and vertex are added to make the graph
+node = Graph()
+
+node.addNode(1)
+node.addNode(2)
+node.addNode(3)
+node.addNode(4)
+node.addNode(5)
+node.addNode(6)
+
+
+node.addVertex(1,2)
+node.addVertex(2,3)
+node.addVertex(2,5)
+node.addVertex(1,4)
+node.addVertex(6,4)
+
+print(node.nodes)
