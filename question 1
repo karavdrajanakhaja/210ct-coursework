@@ -1,0 +1,19 @@
+# 210ct-coursework
+import random
+
+A = [2,3,4,5,6,10,15,19]
+
+B =[]
+#random value is added to B as long as the length of A is greater than zero
+def run():
+
+    x=len(A)
+
+    while x > 0:
+        temp = random.choice(A)
+        B.append(temp)
+        A.remove(temp)
+        x = x - 1
+    print (B)
+
+run()
