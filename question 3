@@ -1,0 +1,15 @@
+# 210ct-coursework
+import math
+
+#perfect square is calculated by dividing the number with its square root
+#if the answer is zero the its perfect square
+#else the square root of number is squared
+def perfect_square(n):
+
+    if(n % math.sqrt(n) == 0):
+        print ("perfect square")
+    else:
+        x = int(math.sqrt(n))
+        print (x**2)
+
+perfect_square(5)
