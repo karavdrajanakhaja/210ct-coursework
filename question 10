@@ -1,0 +1,40 @@
+# 210ct-coursework
+#the position of x increases by 1 everytime
+#if the first number is zero then it is added to tempsequence
+#position keeps moving checking if next number is greater than it previous one
+#the number is added to the tempsequence as long as length of x is less than list of sequence
+#if length of tempsequence is greater than that of longestsubsequence
+#the values in tempsequence are added to longestsubsequence
+#tempsequence values are then deleted
+
+def max_sub_sequence():
+    listofsequence = [0,1,2,10,4,0,6,7,8,5,9,11,15,20]
+    longestsubsequence = []
+    tempsequence = []
+
+    x = 0
+
+    while x < len(listofsequence):
+        if x == 0:
+            tempsequence.append(listofsequence[0])
+        elif (listofsequence[x] > listofsequence[x-1]):
+              tempsequence.append(listofsequence[x])
+        else:
+              if(len(tempsequence) > len(longestsubsequence)):
+                  del longestsubsequence[:]
+                  longestsubsequence.append(tempsequence[:])
+                  del tempsequence[:]
+                  tempsequence.append(listofsequence[x])
+
+                  longestsubsequence.append(tempsequence)
+        x = x + 1
+
+    #print longest
+    if (len(longestsubsequence[0]) > len(longestsubsequence[1])):
+        print(longestsubsequence[0])
+    else:
+        print(longestsubsequence[1])
+
+max_sub_sequence()
+              
+              
