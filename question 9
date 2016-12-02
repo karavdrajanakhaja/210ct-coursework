@@ -1,0 +1,30 @@
+# 210ct-coursework
+#number is searched in the given list from first character to the last
+#if it is not found the list is split
+#the number is checked if its on the upper higher list or lower list
+#this continues until the number is found
+#if not in both then the function returns false
+
+found = False
+
+def binarysearch (alist,num1,num2):
+    global found
+    for x in range (num1,num2):
+        first = 0
+        last = len(alist)-1
+        if found == True:
+            break
+        while first<=last and not found:
+            midpoint = (first + last)//2
+            if alist[midpoint] ==x:
+                found = True
+            else:
+                if x<alist[midpoint]:
+                    last = midpoint-1
+                else:
+                    first = midpoint +1
+    return found
+
+testlist = [0,1,2,8,13,17,19,32,42]
+print (binarysearch(testlist,45,50))
+
